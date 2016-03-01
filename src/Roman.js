@@ -1,4 +1,4 @@
-var romanize = function (number) {
+function romanize(arabic_numeral){
   result = '';
   mappings = [
     {arabic: 1000, roman: 'M'},
@@ -18,9 +18,9 @@ var romanize = function (number) {
 
   for (var i = 0; i < mappings.length; i++) {
     var mapping = mappings[i];
-    while (number >= mapping.arabic) {
+    while (arabic_numeral >= mapping.arabic) {
       result += mapping.roman;
-      number -= mapping.arabic;
+      arabic_numeral -= mapping.arabic;
     }
   }
   
